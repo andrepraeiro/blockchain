@@ -11,6 +11,6 @@ export default class Wallet {
     }
 
     constructor() {
-        this.generateKeyPair()
+        this.generateKeyPair()        
     }
 }

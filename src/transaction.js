@@ -15,12 +15,12 @@ export default class Transaction {
     }
 
     generateSignature(privateKey) {
-        const data = `${this.sender}${this.recipient}${this.value}`
+        const data = sha256(`${this.sender}${this.recipient}${this.value}`)
         this.signature = applyECDSASig(privateKey, data)
     }
 
     verifySignature() {
-        const data = `${this.sender}${this.recipient}${this.value}`
+        const data = sha256(`${this.sender}${this.recipient}${this.value}`)
         return verifyECDSASig(this.sender, data, this.signature)
     }
 }
