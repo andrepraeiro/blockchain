@@ -1,5 +1,7 @@
 import Block from './block'
+import Wallet from './wallet'
 const blockChain = []
+const wallet = new Wallet();
 blockChain.push(new Block('Hi im the first block'))
 blockChain[0].mineBlock(3)
 blockChain.push(new Block('Yo im the second block', blockChain[blockChain.length - 1].hash))
