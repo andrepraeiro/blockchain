@@ -13,7 +13,7 @@ export default class Block {
     }
 
     mineBlock(difficulty) {
-        const target = '0'.repeat(difficulty) //String.fromCharCode(difficulty)
+        const target = '0'.repeat(difficulty) 
         while (this.hash.substring(0, difficulty) !== target) {
             this.nonce++
             this.hash = this.calculateHash()
