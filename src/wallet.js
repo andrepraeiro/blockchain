@@ -11,8 +11,6 @@ export default class Wallet {
     }
 
     constructor() {
-        this.privateKey = {}
-        this.publicKey = {}
         this.generateKeyPair()
     }
 }
