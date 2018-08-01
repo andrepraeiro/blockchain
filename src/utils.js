@@ -9,5 +9,5 @@ export const verifyECDSASig = (publicKey, data, signature) => {
 }
 
 export const getStringFromKey = key => {
-    return key.toString()
+    return key.toString('base64')
 }
